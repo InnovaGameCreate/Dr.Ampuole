@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UniRx;
 using UniRx.Triggers;
+using Bullets;
 
 namespace Player
 {
@@ -10,10 +11,12 @@ namespace Player
         [SerializeField]
         private GameObject bullet;
         private Transform scopeCameraTransform;
+        private PlayerChoiceBullet playerChoiceBullet;
 
         private void Start()
         {
             scopeCameraTransform = GetComponentInChildren<Camera>().transform;
+            playerChoiceBullet = GetComponent<PlayerChoiceBullet>();
 
             // インターバル 3 秒で弾を撃つ
             this.UpdateAsObservable()
@@ -34,6 +37,7 @@ namespace Player
         private GameObject BuildBullet()
         {
             var b = Instantiate(bullet) as GameObject;
+            b.GetComponent<Bullet>().bulletType = playerChoiceBullet.CurrentBulletType.Value;
             b.transform.position = transform.position;
             b.transform.rotation = scopeCameraTransform.rotation;
             return b;

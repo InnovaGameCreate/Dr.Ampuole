@@ -652,7 +652,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: f5cf03dacab3a46498c1cb7f78365d93, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1133,8 +1133,9 @@ GameObject:
   - component: {fileID: 1553112148}
   - component: {fileID: 1553112150}
   - component: {fileID: 1553112149}
+  - component: {fileID: 1553112151}
   m_Layer: 5
-  m_Name: Square
+  m_Name: BulletChoice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1201,6 +1202,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1553112147}
   m_CullTransparentMesh: 1
+--- !u!114 &1553112151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553112147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2df463abe1967ff419270936cc31b05a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  choiceBullet: {fileID: 948942990}
 --- !u!1 &1638638439
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,7 +16,6 @@ namespace Player.Scope
 
         private void Start()
         {
-            Cursor.visible = false;
             canvasRect = canvas.GetComponent<RectTransform>();
             scope.gameObject.SetActive(false);
         }
@@ -29,11 +28,13 @@ namespace Player.Scope
                 {
                     IsShow = true;
                     scope.gameObject.SetActive(IsShow);
+                    Cursor.visible = false;
                 }
                 else
                 {
                     IsShow = false;
                     scope.gameObject.SetActive(IsShow);
+                    Cursor.visible = true;
                 }
             }
 

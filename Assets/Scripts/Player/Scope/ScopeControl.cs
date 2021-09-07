@@ -12,7 +12,7 @@ namespace Player.Scope
 
         [SerializeField]
         private GameObject scope;
-        private bool isShow = false;
+        public bool IsShow { get; private set; } = false;
 
         private void Start()
         {
@@ -27,17 +27,17 @@ namespace Player.Scope
             {
                 if (scope.gameObject.activeSelf == false)
                 {
-                    isShow = true;
-                    scope.gameObject.SetActive(isShow);
+                    IsShow = true;
+                    scope.gameObject.SetActive(IsShow);
                 }
                 else
                 {
-                    isShow = false;
-                    scope.gameObject.SetActive(isShow);
+                    IsShow = false;
+                    scope.gameObject.SetActive(IsShow);
                 }
             }
 
-            if (isShow)
+            if (IsShow)
             {
                 scopeRect.anchoredPosition = CalcScopePosition();
             }

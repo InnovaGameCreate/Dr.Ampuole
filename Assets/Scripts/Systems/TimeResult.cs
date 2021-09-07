@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using System;
 namespace Systems
 {
     public class TimeResult : MonoBehaviour
@@ -8,7 +8,7 @@ namespace Systems
 
         private void Start()
         {
-            Debug.Log(ElapsedTimeResult);
+            naichilab.RankingLoader.Instance.SendScoreAndShowRanking(TimeSpan.FromSeconds(ElapsedTimeResult));
         }
     }
 }

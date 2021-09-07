@@ -12,11 +12,10 @@ namespace Player.Scope
 
         [SerializeField]
         private GameObject scope;
-        private bool isShow = false;
+        public bool IsShow { get; private set; } = false;
 
         private void Start()
         {
-            Cursor.visible = false;
             canvasRect = canvas.GetComponent<RectTransform>();
             scope.gameObject.SetActive(false);
         }
@@ -27,17 +26,19 @@ namespace Player.Scope
             {
                 if (scope.gameObject.activeSelf == false)
                 {
-                    isShow = true;
-                    scope.gameObject.SetActive(isShow);
+                    IsShow = true;
+                    scope.gameObject.SetActive(IsShow);
+                    Cursor.visible = false;
                 }
                 else
                 {
-                    isShow = false;
-                    scope.gameObject.SetActive(isShow);
+                    IsShow = false;
+                    scope.gameObject.SetActive(IsShow);
+                    Cursor.visible = true;
                 }
             }
 
-            if (isShow)
+            if (IsShow)
             {
                 scopeRect.anchoredPosition = CalcScopePosition();
             }

@@ -3,6 +3,7 @@ using UnityEngine;
 using UniRx;
 using UniRx.Triggers;
 using Bullets;
+using Player.Scope;
 
 namespace Player
 {
@@ -12,15 +13,17 @@ namespace Player
         private GameObject bullet;
         private Transform scopeCameraTransform;
         private PlayerChoiceBullet playerChoiceBullet;
+        private ScopeControl scopeControl;
 
         private void Start()
         {
             scopeCameraTransform = GetComponentInChildren<Camera>().transform;
+            scopeControl = GetComponent<ScopeControl>();
             playerChoiceBullet = GetComponent<PlayerChoiceBullet>();
 
             // インターバル 3 秒で弾を撃つ
             this.UpdateAsObservable()
-                .Where(_ => Input.GetMouseButtonDown(0))
+                .Where(_ => Input.GetMouseButtonDown(0) && scopeControl.IsShow)
                 .ThrottleFirst(TimeSpan.FromSeconds(3.0f))
                 .Subscribe(_ =>
                 {

@@ -10,6 +10,8 @@ namespace Patient
 
         private void Start()
         {
+            SetRandomDestination();
+
             this.OnTriggerEnterAsObservable()
                 .Subscribe(col =>
                 {
@@ -22,6 +24,14 @@ namespace Patient
                         Destroy(col.gameObject);
                     }
                 }).AddTo(this);
+        }
+
+        private void Update()
+        {
+            if (navMeshAgent.remainingDistance < 0.1f)
+            {
+                SetRandomDestination();
+            }
         }
     }
 }

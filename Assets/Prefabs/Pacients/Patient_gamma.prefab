@@ -2046,8 +2046,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7631845613005203606}
   - component: {fileID: 7954335899976838799}
+  - component: {fileID: 2317622018553255124}
+  - component: {fileID: 5346035898644732289}
   m_Layer: 0
-  m_Name: Pacient_gamma
+  m_Name: Patient_gamma
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2061,7 +2063,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7107264648817947180}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.213, y: -0.0000076293945, z: -35.002}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1084485639206023403}
@@ -2089,6 +2091,31 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &2317622018553255124
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7107264648817947180}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.7955859, z: 0.5}
+  m_Center: {x: 0, y: 0.9, z: 0}
+--- !u!114 &5346035898644732289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7107264648817947180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6c6ff99a511473418a75579f47de36e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7772166191522162525
 GameObject:
   m_ObjectHideFlags: 0

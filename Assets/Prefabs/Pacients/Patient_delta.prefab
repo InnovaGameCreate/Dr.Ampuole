@@ -2048,6 +2048,7 @@ GameObject:
   - component: {fileID: 8043712559308393269}
   - component: {fileID: -2234203132434321373}
   - component: {fileID: 5308406272259576631}
+  - component: {fileID: 3681689648725584601}
   m_Layer: 0
   m_Name: Patient_delta
   m_TagString: Untagged
@@ -2116,6 +2117,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40a70e43a6973bc46a8a0eb924dc444d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!195 &3681689648725584601
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7160837917626582952}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 1
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &7646615563019571929
 GameObject:
   m_ObjectHideFlags: 0

@@ -2038,6 +2038,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patientSpawn: {fileID: 2121017280}
   countManager: {fileID: 2121017281}
+  text: {fileID: 600192492}
 --- !u!1 &1829116795
 GameObject:
   m_ObjectHideFlags: 0

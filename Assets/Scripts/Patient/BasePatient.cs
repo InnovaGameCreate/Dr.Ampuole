@@ -7,10 +7,12 @@ namespace Patient
     {
         protected NavMeshAgent navMeshAgent;
         protected Transform movePoints;
+        protected PatientCountManager patientManager;
 
         private void Awake()
         {
             movePoints = GameObject.FindGameObjectWithTag("MovePoints").transform;
+            patientManager = GameObject.Find("PatientController").GetComponent<PatientCountManager>();
             navMeshAgent = GetComponent<NavMeshAgent>();
         }
 

@@ -35,6 +35,12 @@ namespace Systems.GameState
                 }).AddTo(this);
         }
 
+        public void ChangeToResult()
+        {
+            GetComponent<ScenePacks>().ResultPack();
+            CurrentGameState.Value = GameState.Result;
+        }
+
         // ゲームの状態を変更
         public void ChangeGameState(GameState state)
         {

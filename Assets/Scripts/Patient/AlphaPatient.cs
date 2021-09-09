@@ -19,6 +19,7 @@ namespace Patient
                     {
                         if (b.bulletType.ToString() == patientType.ToString())
                         {
+                            patientManager.SetPatientCount(patientManager.CurrentPatientCount.Value - 1);
                             Destroy(gameObject);
                         }
                         Destroy(col.gameObject);

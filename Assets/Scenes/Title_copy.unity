@@ -1495,6 +1495,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1597694806}
   - component: {fileID: 1597694805}
+  - component: {fileID: 1597694807}
   m_Layer: 0
   m_Name: SEAudioSource
   m_TagString: Untagged
@@ -1612,6 +1613,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1597694807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597694804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5a915560feefc04397bc365c9e4ef8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seLists:
+  - {fileID: 8300000, guid: f1c551f76ec754642b5a9cf407457584, type: 3}
+  - {fileID: 8300000, guid: 6845c6c4328768f48b01afc1f7165efe, type: 3}
 --- !u!1 &1627058287
 GameObject:
   m_ObjectHideFlags: 0

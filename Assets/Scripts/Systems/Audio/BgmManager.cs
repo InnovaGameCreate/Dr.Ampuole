@@ -20,6 +20,7 @@ namespace Systems.Audio
         {
             if (Instance == null)
             {
+                Instance = this;
                 audioSource = GetComponent<AudioSource>();
                 DontDestroyOnLoad(gameObject);
             }
@@ -53,7 +54,7 @@ namespace Systems.Audio
 
         private void ShotBGM(GameState.GameState state)
         {
-            var bgm = bgmLists.First(bgm => bgm.name.Equals(state.ToString()));
+            var bgm = bgmLists.FirstOrDefault(bgm => bgm.name.Equals(state.ToString()));
 
             if (audioSource.isPlaying)
             {

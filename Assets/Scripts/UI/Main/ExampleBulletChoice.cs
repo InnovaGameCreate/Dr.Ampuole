@@ -19,22 +19,22 @@ public class ExampleBulletChoice : MonoBehaviour
                 switch (bt)
                 {
                     case BulletType.Alpha:
-                        UpdateRectPosY(-95.0f);
+                        UpdateRectPosY(125.0f);
                         return;
                     case BulletType.Beta:
-                        UpdateRectPosY(-135.0f);
+                        UpdateRectPosY(75.0f);
                         return;
                     case BulletType.Gamma:
-                        UpdateRectPosY(-175.0f);
+                        UpdateRectPosY(25.5f);
                         return;
                     case BulletType.Delta:
-                        UpdateRectPosY(-215.0f);
+                        UpdateRectPosY(-25.0f);
                         return;
                     case BulletType.Epsilon:
-                        UpdateRectPosY(-255.0f);
+                        UpdateRectPosY(-75.0f);
                         return;
                     case BulletType.Zeta:
-                        UpdateRectPosY(-295.0f);
+                        UpdateRectPosY(-125.0f);
                         return;
                     default:
                         return;

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Systems.Audio;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -34,6 +35,7 @@ namespace UI.Main.Presenter
                             d.position,
                             canvas.worldCamera,
                             out Vector2 mousePos);
+                    SeManager.Instance.ShotSe(SeType.AddToAmpoule);
                     clone.rectTransform.localPosition = mousePos;
                 }).AddTo(this);
             views[0].Image.OnEndDragAsObservable()
@@ -51,6 +53,7 @@ namespace UI.Main.Presenter
                             d.position,
                             canvas.worldCamera,
                             out Vector2 mousePos);
+                    SeManager.Instance.ShotSe(SeType.AddToAmpoule);
                     clone.rectTransform.localPosition = mousePos;
                 }).AddTo(this);
             views[1].Image.OnEndDragAsObservable()
@@ -68,6 +71,7 @@ namespace UI.Main.Presenter
                             d.position,
                             canvas.worldCamera,
                             out Vector2 mousePos);
+                    SeManager.Instance.ShotSe(SeType.AddToAmpoule);
                     clone.rectTransform.localPosition = mousePos;
                 }).AddTo(this);
             views[2].Image.OnEndDragAsObservable()

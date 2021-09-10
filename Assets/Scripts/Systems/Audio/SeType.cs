@@ -7,6 +7,8 @@ namespace Systems.Audio
     public enum SeType
     {
         Shoot,
-        Reload
+        Reload,
+        ShootAndReroad,
+        AddToAmpoule
     }
 }

@@ -28,7 +28,6 @@ namespace UI.Main
                     if (waveCount == 4)
                     {
                         text.text = "ウェーブがall終わった（仮）";
-                        Debug.Log("特になし");
                     }
                     // wave が始まった時
                     else

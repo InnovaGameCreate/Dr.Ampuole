@@ -100,7 +100,7 @@ namespace Player
         {
             var b = BuildBullet();
             b.GetComponent<Rigidbody>().AddForce(force);
-            SeManager.Instance.ShotSe(SeType.Shoot);
+            SeManager.Instance.ShotSe(SeType.ShootAndReroad);
         }
     }
 }

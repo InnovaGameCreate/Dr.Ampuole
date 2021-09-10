@@ -3,9 +3,9 @@ using UnityEngine.UI;
 using UniRx;
 using Systems.GameState;
 
-namespace UI.Title
+namespace UI.Explanation
 {
-    public class TitleButtonExample : MonoBehaviour
+    public class ExplanationButtonExample : MonoBehaviour
     {
         private Button button;
 
@@ -14,7 +14,7 @@ namespace UI.Title
             button = GetComponent<Button>();
 
             button.OnClickAsObservable()
-                .Subscribe(_ => GameStateController.Instance.ChangeGameState(GameState.Explanation))
+                .Subscribe(_ => GameStateController.Instance.ChangeGameState(GameState.Main))
                 .AddTo(this);
         }
     }

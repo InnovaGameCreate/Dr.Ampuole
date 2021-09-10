@@ -33,7 +33,6 @@ namespace UI.Main.Presenter
                     else
                     {
                         StartCoroutine("Wait");
- 
                     }
                 }).AddTo(this);
 

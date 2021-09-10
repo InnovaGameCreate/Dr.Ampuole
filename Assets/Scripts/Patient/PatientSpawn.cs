@@ -79,7 +79,7 @@ namespace Patient
             {
                 foreach (var point in patientSpawnPoints)
                 {
-                    var cnt = UnityEngine.Random.Range(0, patientSpawnPoints.Count);
+                    var cnt = UnityEngine.Random.Range(0, patientsPrefabs.Length);
                     Instantiate(patientsPrefabs[cnt], point.position, point.rotation);
                 }
                 yield return new WaitForSeconds(5.0f);

@@ -1,14 +1,15 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class VolumeControlSlider : MonoBehaviour
+public class SeVolumeControlSlider : MonoBehaviour
 {
     private Slider slider;
-    [SerializeField] private AudioSource audioSource;
-   
+    private AudioSource audioSource;
+
 
     void Start()
     {
+        audioSource = GameObject.Find("SEAudioSource").GetComponent<AudioSource>();
         slider = GetComponent<Slider>();
         slider.value = 0.5f;
     }

@@ -47,6 +47,10 @@ namespace Systems.Audio
                             ShotBGM(state);
                             return;
                         default:
+                            if (audioSource.isPlaying)
+                            {
+                                audioSource.Stop();
+                            }
                             return;
                     }
                 }).AddTo(this);

@@ -23,7 +23,7 @@ namespace UI.Main.Presenter
             var canvas = GetComponentInParent<Canvas>();
             var canvasRect = GetComponentInParent<RectTransform>();
 
-            views[0].Image.OnPointerDownAsObservable()
+            views[0].Image.OnBeginDragAsObservable()
                 .Subscribe(_ => clone = CloneSmallImage(views[0].Image)).AddTo(this);
             views[0].Image.OnDragAsObservable()
                 .Subscribe(d =>
@@ -37,10 +37,10 @@ namespace UI.Main.Presenter
                     clone.rectTransform.localPosition = mousePos;
                 }).AddTo(this);
             views[0].Image.OnEndDragAsObservable()
-                .Subscribe(d => PourLiquid(d, PatientType.Alpha));
+                .Subscribe(d => PourLiquid(d, PatientType.Alpha)).AddTo(this);
 
 
-            views[1].Image.OnPointerDownAsObservable()
+            views[1].Image.OnBeginDragAsObservable()
                 .Subscribe(_ => clone = CloneSmallImage(views[1].Image)).AddTo(this);
             views[1].Image.OnDragAsObservable()
                 .Subscribe(d =>
@@ -54,10 +54,10 @@ namespace UI.Main.Presenter
                     clone.rectTransform.localPosition = mousePos;
                 }).AddTo(this);
             views[1].Image.OnEndDragAsObservable()
-                .Subscribe(d => PourLiquid(d, PatientType.Beta));
+                .Subscribe(d => PourLiquid(d, PatientType.Beta)).AddTo(this);
 
 
-            views[2].Image.OnPointerDownAsObservable()
+            views[2].Image.OnBeginDragAsObservable()
                 .Subscribe(_ => clone = CloneSmallImage(views[2].Image)).AddTo(this);
             views[2].Image.OnDragAsObservable()
                 .Subscribe(d =>
@@ -71,7 +71,7 @@ namespace UI.Main.Presenter
                     clone.rectTransform.localPosition = mousePos;
                 }).AddTo(this);
             views[2].Image.OnEndDragAsObservable()
-                .Subscribe(d => PourLiquid(d, PatientType.Gamma));
+                .Subscribe(d => PourLiquid(d, PatientType.Gamma)).AddTo(this);
         }
 
         private Image CloneSmallImage(Image image)

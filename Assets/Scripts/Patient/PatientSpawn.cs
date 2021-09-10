@@ -13,10 +13,13 @@ namespace Patient
         public IReadOnlyReactiveProperty<int> CurrentWave => currentWave;
         private List<Transform> patientSpawnPoints = new List<Transform>();
         private Coroutine routine = null;
+        private Coroutine nextWaveRoutine = null;
 
         [SerializeField]
         private GameObject[] patientsPrefabs;
         private PatientCountManager patientCountManager;
+
+        private float WaitTime = 3.0f;
 
         private void Start()
         {
@@ -39,7 +42,6 @@ namespace Patient
                     else
                     {
                         Wave(waveCount);
-
                     }
                 }).AddTo(this);
 
@@ -55,7 +57,10 @@ namespace Patient
                 .Where(count => count == 0)
                 .Subscribe(_ =>
                 {
-                    NextWave();
+                    if (nextWaveRoutine == null)
+                    {
+                        nextWaveRoutine = StartCoroutine(NextWave());
+                    }
                 }).AddTo(this);
         }
 
@@ -74,7 +79,7 @@ namespace Patient
             {
                 foreach (var point in patientSpawnPoints)
                 {
-                    var cnt = UnityEngine.Random.Range(0, patientSpawnPoints.Count);
+                    var cnt = UnityEngine.Random.Range(0, patientsPrefabs.Length);
                     Instantiate(patientsPrefabs[cnt], point.position, point.rotation);
                 }
                 yield return new WaitForSeconds(5.0f);
@@ -87,9 +92,11 @@ namespace Patient
             currentWave.Value = 1;
         }
 
-        public void NextWave()
+        private IEnumerator NextWave()
         {
+            yield return new WaitForSeconds(WaitTime);
             currentWave.Value++;
+            nextWaveRoutine = null;
         }
     }
 }

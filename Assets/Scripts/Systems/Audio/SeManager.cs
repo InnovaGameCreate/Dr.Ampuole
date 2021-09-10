@@ -28,7 +28,6 @@ namespace Systems.Audio
 
         public void ShotSe(SeType type)
         {
-            Debug.Log("aaa");
             AudioClip clip = null;
             clip = seLists.FirstOrDefault(se => se.name.Equals(type.ToString()));
 

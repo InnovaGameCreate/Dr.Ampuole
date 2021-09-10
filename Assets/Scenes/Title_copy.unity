@@ -489,8 +489,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bgmLists:
-  - {fileID: 8300000, guid: 62ecd51b3ef545e4b994d62da12cf1ef, type: 3}
-  - {fileID: 8300000, guid: 407d51137a95c4840aa08795ab98729a, type: 3}
+  - {fileID: 8300000, guid: 4471b6e9b3ceb9a4c90e2594a6fe92ed, type: 3}
+  - {fileID: 8300000, guid: dc44f15423cbc3141957c5eac8eaf7e7, type: 3}
   - {fileID: 8300000, guid: 5bba4d76c5b0fe347b32e8c1fe9da565, type: 3}
 --- !u!1 &600738721
 GameObject:

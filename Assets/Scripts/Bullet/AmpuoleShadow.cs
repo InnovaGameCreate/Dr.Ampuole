@@ -44,19 +44,19 @@ namespace Bullets
             {
                 case PatientType.Delta:
                     image.sprite = sprites[1];
-                    rectTransform.localRotation = new Quaternion(0, 0, 0, 0);
+                    rectTransform.Rotate(0,0,90);
                     bulletType = BulletType.Delta;
                     State = AmpuoleState.Delta;
                     return;
                 case PatientType.Epsilon:
                     image.sprite = sprites[2];
-                    rectTransform.localRotation = new Quaternion(0, 0, 0, 0);
+                    rectTransform.Rotate(0,0,90);
                     bulletType = BulletType.Epsilon;
                     State = AmpuoleState.Epsilon;
                     return;
                 case PatientType.Zeta:
                     image.sprite = sprites[3];
-                    rectTransform.localRotation = new Quaternion(0, 0, 0, 0);
+                    rectTransform.Rotate(0,0,90);
                     bulletType = BulletType.Zeta;
                     State = AmpuoleState.Zeta;
                     return;

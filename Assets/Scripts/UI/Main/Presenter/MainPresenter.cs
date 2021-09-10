@@ -25,14 +25,15 @@ namespace UI.Main.Presenter
                 {
                     // wave をすべて攻略した時
                     if (waveCount == 4)
-                    {
+                    {     
                         text.text = "ウェーブがall終わった（仮）";
                         Debug.Log("特になし");
                     }
                     // wave が始まった時
                     else
                     {
-                        text.text = "ウェーブが始まった（仮）";
+                        StartCoroutine("Wait");
+ 
                     }
                 }).AddTo(this);
 
@@ -45,6 +46,11 @@ namespace UI.Main.Presenter
                     text.text = "患者の殲滅に成功した！（仮）";
                     Debug.Log("一応文章入れておこうかなと思うけれど、これって結局意味ないのではと考えた。でもそれは今こんなことを考えながらタイプしている自分が悪いのだ。");
                 }).AddTo(this);
+        }
+        private IEnumerator Wait()
+        {
+            yield return new WaitForSeconds(1.0f);
+            text.text = "ウェーブが始まった（仮）";
         }
     }
 }

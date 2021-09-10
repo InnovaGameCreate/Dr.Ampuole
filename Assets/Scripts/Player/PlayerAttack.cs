@@ -4,6 +4,7 @@ using UniRx;
 using UniRx.Triggers;
 using Bullets;
 using Player.Scope;
+using Systems.Audio;
 
 namespace Player
 {
@@ -50,6 +51,7 @@ namespace Player
         {
             var b = BuildBullet();
             b.GetComponent<Rigidbody>().AddForce(force);
+            SeManager.Instance.ShotSe(SeType.Shoot);
         }
     }
 }

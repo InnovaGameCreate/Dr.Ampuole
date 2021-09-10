@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: d930504e12d22a2408171a08cbb30766
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - 07LogoTypeGothic7
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 4e3e402290a819e488af8296e2a63e19, type: 3}
+  - {fileID: 12800000, guid: c6e9ff33aafeb114c86a11549eabbe3f, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Patient;
 using UniRx;
-using UniRx.Triggers;
+using Player;
 
 namespace Bullets
 {
@@ -11,10 +11,13 @@ namespace Bullets
     {
         [SerializeField]
         private List<Sprite> sprites;
+        [SerializeField]
+        private PlayerBulletCount playerBulletCount;
         private Image image;
         private RectTransform rectTransform;
         private Quaternion initRotation;
         public AmpuoleState State { get; private set; } = AmpuoleState.Empty;
+        private BulletType bulletType;
 
         private void Start()
         {
@@ -29,6 +32,7 @@ namespace Bullets
                     {
                         image.sprite = sprites[0];
                         rectTransform.localRotation = initRotation;
+                        playerBulletCount.ChangeBulletCount(bulletType);
                         State = AmpuoleState.Empty;
                     }
                 }).AddTo(this);
@@ -41,21 +45,25 @@ namespace Bullets
                 case PatientType.Delta:
                     image.sprite = sprites[1];
                     rectTransform.localRotation = new Quaternion(0, 0, 0, 0);
+                    bulletType = BulletType.Delta;
                     State = AmpuoleState.Delta;
                     return;
                 case PatientType.Epsilon:
                     image.sprite = sprites[2];
                     rectTransform.localRotation = new Quaternion(0, 0, 0, 0);
+                    bulletType = BulletType.Epsilon;
                     State = AmpuoleState.Epsilon;
                     return;
                 case PatientType.Zeta:
                     image.sprite = sprites[3];
                     rectTransform.localRotation = new Quaternion(0, 0, 0, 0);
+                    bulletType = BulletType.Zeta;
                     State = AmpuoleState.Zeta;
                     return;
                 default:
                     image.sprite = sprites[0];
                     State = AmpuoleState.Empty;
+                    bulletType = default;
                     rectTransform.localRotation = initRotation;
                     return;
             }

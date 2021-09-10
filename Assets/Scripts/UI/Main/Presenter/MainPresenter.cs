@@ -27,7 +27,6 @@ namespace UI.Main.Presenter
                     if (waveCount == 4)
                     {     
                         text.text = "ウェーブがall終わった（仮）";
-                        Debug.Log("特になし");
                     }
                     // wave が始まった時
                     else
@@ -43,7 +42,6 @@ namespace UI.Main.Presenter
                 .Subscribe(count => 
                 {
                     text.text = "患者の殲滅に成功した！（仮）";
-                    Debug.Log("一応文章入れておこうかなと思うけれど、これって結局意味ないのではと考えた。でもそれは今こんなことを考えながらタイプしている自分が悪いのだ。");
                 }).AddTo(this);
         }
         private IEnumerator Wait()

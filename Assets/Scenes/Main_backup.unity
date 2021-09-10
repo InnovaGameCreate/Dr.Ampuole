@@ -1560,6 +1560,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 7e48cab83bb2b3647a5c27d6f819b318, type: 3}
   - {fileID: 21300000, guid: 7cfe4f3fefdf0d740918edd1e26cdd05, type: 3}
   - {fileID: 21300000, guid: 5c3a0975a2ff14242b31306c7ac62e12, type: 3}
+  playerBulletCount: {fileID: 0}
 --- !u!114 &763454038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2073,7 +2074,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 61, y: -56}
+  m_AnchoredPosition: {x: 61, y: -912}
   m_SizeDelta: {x: 800, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1016907842

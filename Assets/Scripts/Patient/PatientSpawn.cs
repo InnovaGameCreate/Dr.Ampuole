@@ -14,6 +14,7 @@ namespace Patient
         private List<Transform> patientSpawnPoints = new List<Transform>();
         private Coroutine routine = null;
         private Coroutine nextWaveRoutine = null;
+        private Coroutine resultRoutine = null;
 
         [SerializeField]
         private GameObject[] patientsPrefabs;
@@ -37,7 +38,10 @@ namespace Patient
                 {
                     if (waveCount == 4)
                     {
-                        GameStateController.Instance.ChangeToResult();
+                        if (resultRoutine == null)
+                        {
+                            resultRoutine = StartCoroutine(ResultRoutine());
+                        }
                     }
                     else
                     {
@@ -71,6 +75,13 @@ namespace Patient
                 routine = StartCoroutine(WaveRoutine(waveCount));
                 patientCountManager.SetPatientCount(waveCount * patientSpawnPoints.Count);
             }
+        }
+
+        private IEnumerator ResultRoutine()
+        {
+            yield return new WaitForSeconds(3.0f);
+            GameStateController.Instance.ChangeToResult();
+            resultRoutine = null;
         }
 
         private IEnumerator WaveRoutine(int waveCount)

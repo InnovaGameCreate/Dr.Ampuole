@@ -11,7 +11,7 @@ public class SeVolumeControlSlider : MonoBehaviour
     {
         audioSource = GameObject.Find("SEAudioSource").GetComponent<AudioSource>();
         slider = GetComponent<Slider>();
-        slider.value = 0.5f;
+        slider.value = audioSource.volume;
     }
 
     void Update()

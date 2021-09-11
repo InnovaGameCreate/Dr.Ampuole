@@ -14,6 +14,9 @@ namespace UI.Main
 
         [SerializeField]
         private PatientCountManager countManager;
+
+        [SerializeField]
+        private Animator anim;
         private Text text;
 
         private void Start()
@@ -27,12 +30,26 @@ namespace UI.Main
                     // wave をすべて攻略した時
                     if (waveCount == 4)
                     {
-                        text.text = "ウェーブがall終わった（仮）";
+                        anim.SetTrigger("isTalk");
+                        text.text = "これで完全にこの街から感染者は居なくなりました！\nゆっくり身体を休めてください。ドクター。";
                     }
-                    // wave が始まった時
-                    else
+                    // wave 1 が始まった時
+                    else if (waveCount == 1)
                     {
-                        text.text = "ウェーブが始まった（仮）";
+                        anim.SetTrigger("isTalk");
+                        text.text = "ドクター、この街で新たな感染者を発見しました。\n早急に対応してください。";
+                    }
+                    // wave 2 が始まった時
+                    else if (waveCount == 2)
+                    {
+                        anim.SetTrigger("isTalk");
+                        text.text = "どうしよう…感染者がこんなに現れるなんて想定外です。\n厳しい状況ですがあなたを信じています。";
+                    }
+                    // wave 3 が始まった時
+                    else if (waveCount == 3)
+                    {
+                        anim.SetTrigger("isTalk");
+                        text.text = "これは…。おそらく次が本当に最後の感染者たちです。\n私も全力でバックアップします。";
                     }
                 }).AddTo(this);
 
@@ -42,7 +59,8 @@ namespace UI.Main
                 .Where(count => count <= 0)
                 .Subscribe(count =>
                 {
-                    text.text = "患者の殲滅に成功した！（仮）";
+                    anim.SetTrigger("isTalk");
+                    text.text = "今のが最後の感染者です！やりましたね！";
                 }).AddTo(this);
         }
     }

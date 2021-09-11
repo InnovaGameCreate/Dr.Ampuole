@@ -9,6 +9,7 @@ namespace Systems.Audio
         Shoot,
         Reload,
         ShootAndReroad,
-        AddToAmpoule
+        AddToAmpoule,
+        NoBullet
     }
 }

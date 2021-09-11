@@ -48,21 +48,21 @@ namespace Player
                 case BulletType.Delta:
                     if (bulletCount.DeltaBullets <= 0)
                     {
-                        // ここに弾切れの音
+                        SeManager.Instance.ShotSe(SeType.NoBullet);
                         return false;
                     }
                     return true;
                 case BulletType.Epsilon:
                     if (bulletCount.EpsilonBullets <= 0)
                     {
-                        // ここに弾切れの音
+                        SeManager.Instance.ShotSe(SeType.NoBullet);
                         return false;
                     }
                     return true;
                 case BulletType.Zeta:
                     if (bulletCount.ZetaBullets <= 0)
                     {
-                        // ここに弾切れの音
+                        SeManager.Instance.ShotSe(SeType.NoBullet);
                         return false;
                     }
                     return true;

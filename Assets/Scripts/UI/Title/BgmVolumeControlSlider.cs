@@ -11,7 +11,7 @@ public class BgmVolumeControlSlider : MonoBehaviour
     {
         audioSource = GameObject.Find("BGMAudioSource").GetComponent<AudioSource>();
         slider = GetComponent<Slider>();
-        slider.value = 0.5f;
+        slider.value = audioSource.volume;
     }
 
     void Update()

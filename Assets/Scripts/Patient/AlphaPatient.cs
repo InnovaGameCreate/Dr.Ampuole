@@ -1,13 +1,14 @@
 using UniRx;
 using UniRx.Triggers;
 using Bullets;
+using Systems.Audio;
 
 namespace Patient
 {
     public class AlphaPatient : BasePatient
     {
         protected override PatientType patientType => PatientType.Alpha;
-
+        
         private void Start()
         {
             SetRandomDestination();
@@ -21,6 +22,7 @@ namespace Patient
                         {
                             patientManager.SetPatientCount(patientManager.CurrentPatientCount.Value - 1);
                             Destroy(gameObject);
+                            SeManager.Instance.ShotSe(SeType.Heal);
                         }
                         Destroy(col.gameObject);
                     }

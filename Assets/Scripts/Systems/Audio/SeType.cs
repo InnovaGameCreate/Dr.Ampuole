@@ -10,6 +10,7 @@ namespace Systems.Audio
         Reload,
         ShootAndReroad,
         AddToAmpoule,
-        NoBullet
+        NoBullet,
+        Heal
     }
 }

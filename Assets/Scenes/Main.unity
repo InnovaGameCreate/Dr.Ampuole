@@ -558,7 +558,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 538.3, y: 206.9}
+  m_AnchoredPosition: {x: 562, y: 203}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &228294837
@@ -595,7 +595,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6b0f21b12bc8f3c4e9ee5351f5a61526, type: 3}
+    m_Font: {fileID: 12800000, guid: b1d6b3aaeae744a55bfec61baa0f9f1b, type: 3}
     m_FontSize: 41
     m_FontStyle: 1
     m_BestFit: 0
@@ -1976,9 +1976,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprites:
   - {fileID: 21300000, guid: a897955a0ebfec745a9e27542e4a11b0, type: 3}
-  - {fileID: 21300000, guid: 7e48cab83bb2b3647a5c27d6f819b318, type: 3}
-  - {fileID: 21300000, guid: 7cfe4f3fefdf0d740918edd1e26cdd05, type: 3}
-  - {fileID: 21300000, guid: 5c3a0975a2ff14242b31306c7ac62e12, type: 3}
+  - {fileID: 21300000, guid: 8813ecf43f6337a40b1d678941ab8276, type: 3}
+  - {fileID: 21300000, guid: ee2ffe3dd7022cd43a92b3d146f76bfd, type: 3}
+  - {fileID: 21300000, guid: 7d144e91d636cd4408425252a0b8e44e, type: 3}
   playerBulletCount: {fileID: 948942991}
 --- !u!114 &763454038
 MonoBehaviour:

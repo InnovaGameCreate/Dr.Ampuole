@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Asobikata_2 : MonoBehaviour
 {
-    [SerializeField] private GameObject asobikata_2;
+    [SerializeField] private GameObject asobikata_1;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +17,7 @@ public class Asobikata_2 : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            asobikata_2.SetActive(true);
+            asobikata_1.SetActive(true);
         }
     }
 }

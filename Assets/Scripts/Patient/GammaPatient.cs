@@ -1,7 +1,6 @@
 using UniRx;
 using UniRx.Triggers;
 using Bullets;
-using Systems.Audio;
 
 namespace Patient
 {
@@ -22,7 +21,6 @@ namespace Patient
                         {
                             patientManager.SetPatientCount(patientManager.CurrentPatientCount.Value - 1);
                             Destroy(gameObject);
-                            SeManager.Instance.ShotSe(SeType.Heal);
                         }
                         Destroy(col.gameObject);
                     }

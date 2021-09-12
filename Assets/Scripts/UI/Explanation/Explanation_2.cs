@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Asobikata : MonoBehaviour
+public class Explanation_2 : MonoBehaviour
 {
-    [SerializeField] private GameObject asobikata;
-
+    [SerializeField] private GameObject asobikata_3;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,10 +14,9 @@ public class Asobikata : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-    }
-    public void OnClick()
-    {
-        asobikata.SetActive(true);
+        if (Input.GetMouseButtonDown(0))
+        {
+            asobikata_3.SetActive(true);
+        }
     }
 }
